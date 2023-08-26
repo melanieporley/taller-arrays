@@ -39,4 +39,11 @@ function showList(array) {
 document.addEventListener("DOMContentLoaded", (e) => {
   // Escribe tu solución aquí
   // Sugerencia de cómo mostrar el array => showList(strangeArray);
+  const newArray = [];
+  strangeArray.forEach((element) => {
+   if (typeof element == "string") {
+     element = element[0].toUpperCase();
+     newArray.push(element);
+   }});
+ showList(newArray.toSorted());
 });
